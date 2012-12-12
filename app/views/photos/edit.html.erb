@@ -1,0 +1,7 @@
+<h1>Editing photo</h1>
+
+<%= image_tag @photo.photo(:thumb)%>
+
+<%= form_for @photo, :url => { :action => 'update', :id => @photo.id, :album_id => @album.id, :category_id => @album.category_id }, :html => { :multipart => true }  do |f| %>
+	<%= render(:partial => 'form', :locals => {:f => f}) %>
+<% end %>

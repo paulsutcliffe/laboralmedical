@@ -1,0 +1,120 @@
+<div id="main" role="main" class="not-front albums">
+    	<section id="preface-top" class="del" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt=> "LMS Consulting") %>
+                </div>
+				<div>
+					<%= link_to 'Agregar Álbum', new_album_path, :class => 'btn-new' %>
+				</div>
+            </div>
+    	</section>
+    
+    	<section id="content">
+        		<section id="sidebar-light" class="labmedical">
+                	<div class="sidebar-inner">
+			   <% @albumsmed.each do |album| %>
+                		<figure>
+						
+    
+  
+						
+						<%= link_to 'Eliminar', album, :confirm => '¿Seguro de eliminar? Esta acción no podrá ser desecha.', :method => :delete, :class => 'btn-del' %>
+                        <%= link_to (image_tag album.polaroid(:regular)), :controller => 'photos', :action => 'adminlist', :class => 'btn-edit', :album_id => album.id, :category_id => album.category_id %>
+								  
+								 
+                                	<figcaption>
+                            			<%= album.name %><br />
+                                		<span><%= album.polaroid_updated_at %></span>
+                            		</figcaption>
+                        	</figure>
+                           <% end %>
+                    </div>               	
+                </section>
+                
+                <section id="sidebar-dark" class="consulting">
+                	  <div class="sidebar-inner">
+                	  <% @albumslms.each do |album| %>
+                		<figure>
+                                <%= link_to 'Eliminar', album, :confirm => '¿Seguro de eliminar? Esta acción no podrá ser desecha.', :method => :delete, :class => 'btn-del' %>
+                        <%= link_to (image_tag album.polaroid(:regular)), :controller => 'photos', :action => 'adminlist', :class => 'btn-edit', :album_id => album.id, :category_id => album.category_id %>
+                            		<figcaption>
+                            			<%= album.name %><br />
+                                		<span><%= album.polaroid_updated_at %></span>
+                            		</figcaption>
+                        	</figure>
+                           <% end %>
+                    </div>              	
+                </section>  
+		</section>
+        
+        <section id="postcript-top" class="front-blocks">
+          <div id="postcript-top-inner">
+            <div id="postcript-top-inner-inner">
+        		
+             </div>
+          </div>
+        </section>
+        
+        
+    </div>
+
+
+
+
+<!--
+<table>
+  <tr>
+  
+    <th>Imagen</th>
+    <th>Nombre</th>
+    <th>Categoría</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @albumsmed.each do |album| %>
+  <tr>
+    <td><%= image_tag album.polaroid(:thumb) %></td>
+    <td><%= album.name %></td>
+    <td><%= album.category_id %></td>
+    <td><%= link_to 'Show', album %>
+    <%= link_to 'Edit', edit_album_path(album) %>
+    <%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+<table>
+  <tr>
+    <th>Imagen</th>
+    <th>Nombre</th>
+    <th>Categoría</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @albumslms.each do |album| %>
+  <tr>
+    <td><%= image_tag album.polaroid(:thumb) %></td>
+    <td><%= album.name %></td>
+    <td><%= album.category_id %></td>
+    <td><%= link_to 'Show', album %>
+    <%= link_to 'Edit', edit_album_path(album) %>
+    <%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+-->

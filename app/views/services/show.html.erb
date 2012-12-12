@@ -1,0 +1,74 @@
+<div id="main" role="main" class="not-front services-show category-<%= @service.category_id %>">
+	<section id="preface-top" >
+    	<div class="container_16">
+     		<div class="full-side">
+                
+                     <div id="breadcrumb">
+				    <%= breadcrumb :separator => "&rsaquo;",
+				                   :autoroot => true,
+				                   :show_root_alone => false,
+				                   :link_last => false %>
+			</div>
+                    
+            </div>
+        </div>
+	</section>
+
+	<section id="content-top" class="bevel-1-bottom">
+		
+    	<article class="container_16">
+	 <%= notice %>
+        	<figure>
+      		    
+			<%= image_tag @service.image(:thumb) %>
+   
+            	</figure>
+            
+            <footer>
+	
+        	    
+	
+            </footer>
+        </article>               
+	</section>
+    
+    <section id="content" class="bevel-1-top">
+    	<article class="container_16">
+		<h1 class="page-title"><%= @service.name %></h1>
+      		    <p>
+           		<%= sanitize(simple_format(@service.description), :tags => %w(p br b i ul li)) %>
+		    </p>
+        	
+        	<footer>
+        		<%= render 'sharing' %>
+		
+        	</footer>
+        </article>
+
+    </section>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+                
+		
+                
+              
+                
+
+
+            	
+
+       
+
+
+

@@ -1,0 +1,45 @@
+class AccessController < ApplicationController
+  
+  #layout 'admin'
+  
+  before_filter :confirm_logged_in, :except => [:login, :attempt_login, :logout]
+  
+  def index
+    menu
+    render('menu')
+  end
+  
+  def menu
+    respond_to do |format|
+      format.html {render :layout => 'admin'}
+    end
+  end
+
+  def login
+    respond_to do |format|
+      format.html {render :layout => 'login'}
+    end
+  end
+  
+  def attempt_login
+    authorized_user = AdminUser.authenticate(params[:username], params[:password])
+    if authorized_user
+      session[:user_id] = authorized_user.id
+      session[:username] = authorized_user.username
+      flash[:notice] = "Hola Tommy, desde aquí puedes modificar los contenidos de tu web. Puedes por ejemplo:"
+      redirect_to :action => 'menu'
+    else
+      flash[:notice] = "Usuario y/o contraseña inválidos"
+      redirect_to(:action => 'login')
+    end
+    
+  end
+  
+  def logout
+    session[:user_id] = nil
+    session[:username] = nil
+    flash[:notice] = "Has cerrado sesión"
+    redirect_to :action => 'login'
+  end
+
+end

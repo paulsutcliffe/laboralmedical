@@ -1,0 +1,102 @@
+<div id="main" role="main" class="not-front staff">
+    	<section id="preface-top" class="del" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt => "LabMedical") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt => "Consulting") %>
+                </div>
+				<div>
+						<%= link_to 'Agregar miembro', new_member_path, :class => 'btn-new' %>
+					</div>
+            </div>
+    	</section>
+    
+    	<section id="content">
+        		<section id="sidebar-light" class="labmedical">
+                	   <div class="sidebar-inner">
+			    <% @membersmed.each do |member| %>
+                	    <figure>
+                        	
+						
+ 
+							
+							
+							
+ 					<%= link_to 'Eliminar', member, :confirm => '¿Seguro de eliminar? Esta acción no podrá ser desecha.', :method => :delete, :class => 'btn-del' %>
+					<%= link_to image_tag(member.avatar(:thumb)), edit_member_path(member), :class => 'btn-edit' %>
+                                <figcaption>
+                            	    <h2><%= member.name %></h2>
+                                    <span><%= member.email %></span>
+                                    <p><%= truncate(member.description, :length => 80) %><%= link_to 'Ver todo el texto', edit_member_path(member) %></p>
+                                </figcaption>
+                          </figure>
+                          <% end %>
+                        
+                      <p><%= will_paginate @membersmed %></p>
+                    	</div>
+      		
+                </section>
+                
+                <section id="sidebar-dark" class="consulting">
+                	<div class="sidebar-inner">
+			    <% @memberslms.each do |member| %>
+                	    <figure>
+                
+				
+				<%= link_to 'Eliminar', member, :confirm => '¿Seguro de eliminar? Esta acción no podrá ser desecha.', :method => :delete, :class => 'btn-del' %>
+				<%= link_to image_tag(member.avatar(:thumb)), edit_member_path(member), :class => 'btn-edit' %>        	
+
+                                <figcaption>
+                            	    <h2><%= member.name %></h2>
+                                    <span><%= member.email %></span>
+                                    <p>
+                                	<%= truncate(member.description, :length => 80) %><%= link_to 'Ver todo el texto', edit_member_path(member) %>
+					
+                                        
+                                    </p>
+                                </figcaption>
+                          </figure>
+                          <% end %>
+                        
+                      <p><%= will_paginate @memberslms %></p>
+                    	</div>              	
+                </section>  
+				
+		</section>
+		
+        
+        <section id="postcript-top" class="front-blocks">
+          <div id="postcript-top-inner">
+            <div id="postcript-top-inner-inner">
+        		
+             </div>
+          </div>
+        </section>
+        
+        
+    </div>
+    
+
+<!--
+<table>
+  <th>Nombre</th>
+<th>Descripción</th>
+<th>Categoría</th>
+<th>Email</th>
+<th></th>
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.name %></td>
+    <td><%= member.description %></td>
+    <td><%= member.category_id %></td>
+    <td><%= member.email %></td>
+    <td><%= link_to 'Mostrar', member %>
+    <%= link_to 'Editar', edit_member_path(member) %>
+    <%= link_to 'Borrar', member, :confirm => '¿Seguro de borrar la data?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+-->

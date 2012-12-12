@@ -1,0 +1,75 @@
+<div id="main" role="main" class="not-front alliances cms">
+    	<section id="preface-top" class="del" >
+        	<div class="container_16">
+         		<div class="full-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                    <div>
+						<%= link_to 'New Alliance', new_alliance_path, :class => 'btn-new' %>
+					</div>
+                </div>
+            </div>
+    	</section>
+            
+        <section id="content">
+        	<div class="container_16">
+            	
+                <dl>
+                	<% @alliances.each do |alliance| %>
+                	<dt>
+				
+				
+				
+   				 <%= link_to 'Eliminar', alliance, :confirm => '¿Seguro de eliminar? Esta acción no puede ser desecha.', :method => :delete, :class => 'btn-del' %>
+				 <%= link_to image_tag(alliance.logo(:thumb)), edit_alliance_path(alliance), :class => 'btn-edit' %>
+				 
+			</dt>
+                    	<dd>
+                    		<p class="grid_6">
+					<%= alliance.name %><br />
+                        		
+                        	</p>
+                    	</dd>
+                    	<% end %>
+                    
+                </dl>
+                
+                
+            </div>
+        </section>
+        
+        
+    </div>
+    
+
+
+<!--
+<%= link_to 'New Alliance', new_alliance_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Logo file name</th>
+    <th>Logo content type</th>
+    <th>Logo file size</th>
+    <th>Logo updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alliances.each do |alliance| %>
+  <tr>
+    <td><%= alliance.name %></td>
+    <td><%= alliance.logo_file_name %></td>
+    <td><%= alliance.logo_content_type %></td>
+    <td><%= alliance.logo_file_size %></td>
+    <td><%= alliance.logo_updated_at %></td>
+    <td><%= link_to 'Show', alliance %>
+  <%= link_to 'Edit', edit_alliance_path(alliance) %>
+    <%= link_to 'Destroy', alliance, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+-->

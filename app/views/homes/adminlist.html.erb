@@ -1,0 +1,17 @@
+<table>
+<tr>
+	<th>Nombre</td>
+	<th>Reseña</td>
+	<td></td>
+	
+</tr>
+<% @homes.each do |home| %>
+  <tr>
+    <td><%= home.slide_file_name %></td>
+    <td><%= home.caption %></td>
+    <td><%= link_to 'Mostrar', home %>
+    <%= link_to 'Editar', edit_home_path(home) %>
+    <%= link_to 'Borrar', home, :confirm => '¿Seguro de borrar la imagen?', :method => :delete %></td>
+  </tr>
+<% end %>
+<%= link_to 'New Home', new_home_path %>

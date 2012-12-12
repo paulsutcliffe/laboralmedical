@@ -1,0 +1,16 @@
+<article>
+	<section>
+	<div class="identity admin-greeting"><p>Hola: <b><%= session[:username] %></b>, desde aquí puedes modificar los contenidos de la web. Puedes por ejemplo:</p></div>
+	<div class="sidebar-inner">
+	<ul>
+    	<li><h2><%= link_to "Agregar un nuevo servicio", {:controller => 'services', :action => 'new'}, :class=> 'btn-type-1' %></h2></li>
+    	<li><h2><%= link_to "Escribir un nuevo post en el Blog", {:controller => 'posts', :action => 'new'}, :class=> 'btn-type-1' %></h2></li>
+		<li><h2><%= link_to "Crear un álbum y subir nuevas fotos", {:controller => 'albums', :action => 'new'}, :class=> 'btn-type-1' %></h2></li>
+		<li><h2><%= link_to "Agregar un nuevo miembro al staff", {:controller => 'members', :action => 'new'}, :class=> 'btn-type-1' %></h2></li>
+		<li><h2><%= link_to "Agregar una nueva alianza estratégica", {:controller => 'alliances', :action => 'new'}, :class=> 'btn-type-1' %></h2></li>
+		<li><h2><%= link_to "Revisar la lista de contactos", {:controller => 'contacts', :action => 'adminlist'}, :class=> 'btn-type-1' %></h2></li>
+    	<li><h2><%= link_to "Salir", {:action => 'logout'}, :class=> 'btn-type-1' %></h2></li>
+	</ul>
+	</div>
+	</section>
+</article>

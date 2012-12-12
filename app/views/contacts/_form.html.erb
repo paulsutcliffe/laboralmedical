@@ -1,0 +1,45 @@
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+
+	  <p id="notice"><%= notice %></p>
+
+    </div>
+  <% end %>
+
+  <fieldset>
+  	<legend>Sus datos serán usados únicamente para responder su mensaje.</legend>
+
+  <div class="field">
+    <%= f.label :name, 'Nombre' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email, 'E-mail' %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone, 'Teléfono' %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile, 'Celular' %>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :message, 'Mensaje' %>
+    <%= f.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </fieldset>
+  
+<% end %>

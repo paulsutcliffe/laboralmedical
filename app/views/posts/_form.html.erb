@@ -1,0 +1,35 @@
+<%= form_for(@post, :html => { :multipart => true } ) do |f| %>
+<fieldset>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, 'Título' %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content, 'Texto de contenido' %>
+	<%= f.cktext_area :content, :toolbar => 'Full', :width => 800, :height => 400 %>
+  </div>
+  <div class="field category-radio">
+    <%= f.label :picture, 'Subir imagen' %>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id,'Escoger categoría' %>
+    <%= f.select(:category_id, @categories.collect { |p| [p.name, p.id]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </fieldset>
+<% end %>

@@ -1,0 +1,57 @@
+<div id="main" role="main" class="not-front post show category-<%= @photo.category_id %>">
+	<section id="preface-top" >
+    	<div class="container_16">
+     		<div class="full-side">
+                
+                    <div id="breadcrumb">
+				    <%= breadcrumb :separator => "&rsaquo;",
+				                   :autoroot => true,
+				                   :show_root_alone => false,
+				                   :link_last => false %>
+			</div>
+            </div>
+        </div>
+	</section>
+
+	<section id="content-top" class="bevel-1-bottom">
+		
+    	<article class="container_16">
+	<h1></h1> 
+        	<figure>
+      		    
+			<%= image_tag @photo.photo(:original) %>
+   
+            	</figure>
+            
+            <footer>
+	
+        	    	
+	
+            </footer>
+        </article>               
+	</section>
+    
+    <section id="content" class="bevel-1-top">
+    	<article class="container_16">
+		
+        	
+        	<footer>
+        		<nav style="margin:10px 0">
+               		<%= render 'sharing' %>
+            	</nav>
+		
+        	</footer>
+        </article>
+
+    </section>
+    
+    
+</div>
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  
+</p>

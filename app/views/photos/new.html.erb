@@ -1,0 +1,8 @@
+<h1>Agregar Foto al Álbum</h1>
+<%= link_to '< Atrás', photos_path, :class => 'btn-back-edit' %>
+
+<%= form_for @photo, :url => { :action => 'create', :album_id => @album.id, :category_id => @album.category_id }, :html => { :multipart => true }  do |f| %>
+	<%= render(:partial => 'form', :locals => {:f => f}) %>
+<% end %>
+
+

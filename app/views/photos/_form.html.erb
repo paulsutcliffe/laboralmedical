@@ -1,0 +1,35 @@
+
+<fieldset>
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :name, 'Nombre' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :file, 'Subir imagen'  %>
+    <%= f.file_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :album, 'Escoger álbum' %>
+    <%= f.select(:album_id, @albums.collect {|p| [p.name, p.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :category, 'Escoger categoría' %>
+    <%= f.select(:category_id, @categories.collect {|p| [p.name, p.id]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </fieldset>

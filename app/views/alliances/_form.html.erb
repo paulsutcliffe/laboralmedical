@@ -1,0 +1,29 @@
+<%= form_for(@alliance, :html => { :multipart => true }) do |f| %>
+  <fieldset>
+  <% if @alliance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alliance.errors.count, "error") %> prohibited this alliance from being saved:</h2>
+
+      <ul>
+      <% @alliance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+
+  <div class="field">
+    <%= f.label :name, 'Nombre de la empresa' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :file, 'Subir logo' %>
+    <%= f.file_field :logo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </fieldset>
+<% end %>

@@ -1,0 +1,76 @@
+<div id="main" role="main" class="not-front post cms">
+	<section id="preface-top" >
+    	<div class="container_16">
+     		<div class="full-side">
+                <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                    <div> <%= link_to 'Agregar Post', new_post_path, :class => 'btn-new' %></div>
+            </div>
+            
+        </div>
+	</section>
+
+	
+
+
+
+
+    
+    <section id="content" class="bevel-1-top">
+	
+<section id="sidebar-light">
+    <div class="sidebar-inner">
+    <% @postsmed.each do |post| %>
+       <section>
+           <header>
+                  <h1>  
+			<%= title "Blog" %>
+				</h1>	
+				   <%= post.picture_updated_at %>		
+			<span>
+    		<%= link_to 'Borrar', post, :confirm => '¿Seguro de eliminar? Esta acción no podrá ser desecha.', :method => :delete, :class => 'btn-del' %></span>	
+            </header>
+            <figure>
+			  <%= link_to image_tag(post.picture(:regular)), edit_post_path(post), :class => 'btn-edit' %>
+                       
+            </figure>
+            <article>
+                        <%= post.content %>
+            </article>
+             <footer>
+	     </footer>
+      </section>
+    <% end %>
+    </div>               	
+</section>
+                
+<section id="sidebar-dark">
+    <div class="sidebar-inner">
+    <% @postslms.each do |post| %>
+         <section>
+            <header>     
+			<h1> 
+		<%= title "Blog" %>
+			</h1>
+			 <%= post.picture_updated_at %>	
+		<span>
+            <%= link_to 'Borrar', post, :confirm => '¿Seguro de eliminar? Esta acción no podrá ser desecha.', :method => :delete, :class => 'btn-del' %>
+		 </span>
+             </header>
+             <figure>
+			  <%= link_to image_tag(post.picture(:regular)), edit_post_path(post), :class => 'btn-edit' %>
+                          
+             </figure>
+             <article>
+                        <%= post.content %>
+             </article>
+             <footer>
+	     </footer>
+           </section>
+<% end %>
+</section>
+
+</div>
+
+
+
+

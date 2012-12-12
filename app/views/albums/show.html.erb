@@ -1,0 +1,53 @@
+<div id="main" role="main" class="not-front album show category-<%= @album.category_id %>">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="full-side">
+                   
+
+                    <div id="breadcrumb">
+				    <%= breadcrumb :separator => "&rsaquo;",
+				                   :autoroot => true,
+				                   :show_root_alone => false,
+				                   :link_last => false %>
+			</div>
+                </div>
+            </div>
+    	</section>
+            
+        <section id="content">
+        	<div class="container_16">
+            	<h1 class="page-title"><%= title "Álbum" + " - " + @album.name %>..</h1>
+                <% if @album.photos %>
+    					<% @album.photos.each do |photo| %>
+								<a href="../system/photos/<%= photo.id %>/original/<%= photo.photo_file_name %>" class="lightbox" rel="group">
+								<%= image_tag(photo.photo(:thumb)) %>
+								</a>
+    					<% end %>
+				<% end %>
+				<div>
+<a href="/system/photos/11/original/DSC_7375.jpg" class="lightbox" >
+								<img src="/system/photos/15/thumb/DSC_7448.jpg" />
+</a>
+<a href="public/system/photos/11/original/DSC_7375.jpg" class="lightbox" >
+								<img src="/system/photos/15/thumb/DSC_7448.jpg" />
+</a>
+<a href="/public/system/photos/11/original/DSC_7375.jpg" class="lightbox" >
+								<img src="/system/photos/15/thumb/DSC_7448.jpg" />
+</a>
+</div>
+                <footer>
+               
+						<a href="" class="btn-back">&lt; Atr&aacute;s</a>
+				</footer>
+            </div>
+        </section>
+        
+        
+    </div>
+    
+    
+
+
+
+
+

@@ -1,0 +1,8 @@
+<h1>Editing album</h1>
+<p style="float:right">
+  <%= image_tag @album.polaroid(:regular) %>
+</p>
+<%= render 'form' %>
+
+<%= link_to 'Show', @album %> |
+<%= link_to 'Back', albums_path %>

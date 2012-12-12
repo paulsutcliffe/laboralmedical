@@ -1,0 +1,36 @@
+<div id="main" role="main" class="not-front photos-index photos-adminlist">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="full-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                    
+					<div><%= link_to 'Agregar Foto a ' + @album.name, :action => 'new', :album_id => @album.id, :category_id => @album.category_id, :class => 'btn-new' %></div>
+                </div>
+            </div>
+    	</section>
+            
+        <section id="content">
+        	<div class="container_16">
+            	
+                <% @photos.each do |photo| %>
+				<figure>
+					<figcaption>
+						<%= link_to 'Show', photo %><%= link_to 'Edit', edit_photo_path(photo) %><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %>
+					</figcaption>
+                      
+                	<%= image_tag photo.photo(:thumb) %>
+                        <%= photo.name %>
+                   
+				</figure>
+		  <% end %>
+                
+                
+            </div>
+        </section>
+        
+        
+    </div>
+
+
+
+

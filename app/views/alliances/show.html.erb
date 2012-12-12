@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p style="float:right">
+  <%= image_tag @alliance.logo(:thumb)  %>
+
+</p>
+
+<p>
+  <b>Name:</b>
+  <span><%= @alliance.name %></span>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_alliance_path(@alliance) %> |
+<%= link_to 'Back', alliances_path %>

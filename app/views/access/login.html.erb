@@ -1,0 +1,20 @@
+<h1>Gestor de Contenidos de Laboral Medical</h1>
+<%= form_tag(:action => 'attempt_login') do %>
+	<fieldset>
+		<legend>Formulario de acceso</legend>
+	
+	<div class="field">
+	<%= label_tag(:Usuario) %>
+	<%= text_field_tag(:username) %>
+	</div>
+	
+	<div class="field">
+			<%= label_tag(:Contraseña) %>
+			<%= password_field_tag(:password) %>
+	</div>
+			
+	<div class="actions">
+			<%= submit_tag("Ingresar") %>
+	</div>
+	</fieldset>
+<% end %>

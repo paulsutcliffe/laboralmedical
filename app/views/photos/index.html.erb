@@ -1,0 +1,26 @@
+<div id="main" role="main" class="not-front photos-index  category-<%= @photos.category_id %>">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="full-side">
+                    
+                    
+                </div>
+            </div>
+    	</section>
+            
+        <section id="content">
+        	<div class="container_16">
+            	
+                <% @photos.each do |photo| %>
+            	    <a href="">           
+                	<%= image_tag photo.photo(:thumb) %>
+                        <%= photo.name %>
+                    </a>
+		  <% end %>
+                
+                
+            </div>
+        </section>
+        
+        
+    </div>

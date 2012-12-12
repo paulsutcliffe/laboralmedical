@@ -1,0 +1,36 @@
+<p style="float:right">
+   <%= image_tag @member.avatar(:thumb) %>
+</p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <span><%= @member.name %></span>
+</p>
+
+<p>
+  <b>Description:</b>
+  <span><%= @member.description %></span>
+</p>
+
+
+
+<p>
+  <b>Avatar updated at:</b>
+  <span><%= @member.avatar_updated_at %></span>
+</p>
+
+<p>
+  <b>Category:</b>
+  <span><%= @member.category_id %></span>
+</p>
+
+<p>
+  <b>Email:</b>
+  <span><%= @member.email %></span>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

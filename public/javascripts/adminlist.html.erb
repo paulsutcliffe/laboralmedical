@@ -1,0 +1,96 @@
+<div id="main" role="main" class="not-front staff">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt => "LabMedical") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt => "Consulting") %>
+                </div>
+            </div>
+    	</section>
+    
+    	<section id="content">
+        		<section id="sidebar-light" class="labmedical">
+                	   <div class="sidebar-inner">
+			    <% @membersmed.each do |member| %>
+                	    <figure>
+                        	<%= link_to 'Mostrar', member %>
+    <%= link_to 'Editar', edit_member_path(member) %>
+    <%= link_to 'Borrar', member, :confirm => '¿Seguro de borrar la data?', :method => :delete %>
+ 					<%= image_tag member.avatar(:thumb) %>
+                                <figcaption>
+                            	    <h2><%= member.name %></h2>
+                                    <span><%= member.email %></span>
+                                    <p>
+                                	<%= member.description %>
+					
+                                        
+                                    </p>
+                                </figcaption>
+                          </figure>
+                          <% end %>
+                        
+                      <p><%= will_paginate @membersmed %></p>
+                    	</div>
+      		
+                </section>
+                
+                <section id="sidebar-dark" class="consulting">
+                	<div class="sidebar-inner">
+			    <% @memberslms.each do |member| %>
+                	    <figure>
+                        	
+ 				<%= image_tag member.avatar(:thumb) %>
+                                <figcaption>
+                            	    <h2><%= member.name %></h2>
+                                    <span><%= member.email %></span>
+                                    <p>
+                                	<%= member.description %>
+					
+                                        
+                                    </p>
+                                </figcaption>
+                          </figure>
+                          <% end %>
+                        
+                      <p><%= will_paginate @memberslms %></p>
+                    	</div>              	
+                </section>  
+				
+		</section>
+		
+        
+        <section id="postcript-top" class="front-blocks">
+          <div id="postcript-top-inner">
+            <div id="postcript-top-inner-inner">
+        		
+             </div>
+          </div>
+        </section>
+        
+        
+    </div>
+    
+
+<!--
+<table>
+  <th>Nombre</th>
+<th>Descripción</th>
+<th>Categoría</th>
+<th>Email</th>
+<th></th>
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.name %></td>
+    <td><%= member.description %></td>
+    <td><%= member.category_id %></td>
+    <td><%= member.email %></td>
+    <td><%= link_to 'Mostrar', member %>
+    <%= link_to 'Editar', edit_member_path(member) %>
+    <%= link_to 'Borrar', member, :confirm => '¿Seguro de borrar la data?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+-->

@@ -1,0 +1,95 @@
+<div id="main" role="main" class="not-front post">
+	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "Medical Laboral") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt=> "LMS Consulting") %>
+                </div>
+            </div>
+    	</section>
+
+	
+
+
+
+
+    
+    <section id="content" class="bevel-1-top">
+        	<section id="sidebar-light">
+                	<div class="sidebar-inner">
+<% @postsmed.each do |post| %>
+            <section>
+                    <header>
+                    
+			<h1><a href="posts/<%= post.id %>"><%= post.title %></a></h1>			
+						<span class="date"><%= post.picture_updated_at %></span>	
+						
+                    </header>
+                	<figure>
+			  <%= image_tag post.picture(:regular) %>
+                          <figcaption>
+                             
+                           </figcaption>
+                        </figure>
+                      <article><p><%= sanitize(simple_format(truncate(post.content, :length => 250, :omission => '...')), :tags => %w(p i br b)) %></p><a href="posts/<%= post.id %>" class="btn-readmore">Leer Más</a></article>
+                      <footer>
+
+               		<%= render 'sharing' %>
+            
+		</footer>
+           </section>
+<% end %>
+<p><%= will_paginate @postsmed %></p>
+                    </div>               	
+                </section>
+                
+                <section id="sidebar-dark">
+                	  <div class="sidebar-inner">
+                     <% @postslms.each do |post| %>
+            <section>
+                    <header>
+                    
+			<h1><a href="posts/<%= post.id %>"><%= post.title %></a></h1>			
+						<span class="date"><%= post.picture_updated_at %></span>		
+						
+                    </header>
+                	<figure>
+			  <%= image_tag post.picture(:regular) %>
+                          <figcaption>
+                             
+                           </figcaption>
+                        </figure>
+                      <article><p><%= truncate(post.content, :length => 250, :omission => '...') %></p><a href="posts/<%= post.id %>" class="btn-readmore">Leer Más</a></article>
+                      <footer>
+        				<%= render 'sharing' %>
+					  </footer>
+           </section>
+<% end %>
+<p><%= will_paginate @postslms %></p>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	
+    </section>
+    
+    
+</div>

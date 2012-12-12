@@ -1,0 +1,40 @@
+<%= form_for(@member, :html => { :multipart => true }) do |f| %>
+<fieldset>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <div class="field">
+    <%= f.label :name, 'Nombre' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :file, 'Subir imagen' %>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="field">
+    <%= f.label :description, 'Texto descriptivo' %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id, 'Escoger categoría' %>
+    <%= f.select(:category_id, @categories.collect { |p| [p.name, p.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :email, 'Email' %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </fieldset>
+<% end %>

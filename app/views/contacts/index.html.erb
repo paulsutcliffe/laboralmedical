@@ -1,0 +1,72 @@
+<div id="main" role="main" class="not-front contact index">
+	<section id="preface-top" >
+    	<div class="container_16">
+     		<div class="full-side">
+                <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                    <%= link_to 'New Contact', new_contact_path, :class => 'btn-new' %>
+            </div>
+        </div>
+	</section>
+
+	<section id="content-top" class="bevel-1-bottom">
+		
+    	<article class="container_16">
+	
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Mobile</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr>
+    <td><%= contact.name %></td>
+    <td><%= contact.email %></td>
+    <td><%= contact.phone %></td>
+    <td><%= contact.mobile %></td>
+    <td><%= truncate(contact.message, :length => 2) %></td>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+        </article>               
+	</section>
+    
+    <section id="content" class="bevel-1-top">
+    	<article class="container_16">
+		
+      		  
+
+        	
+        	
+        </article>
+
+    </section>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  slug: MyString
+  name: MyString
+  polaroid_file_name: MyString
+  polaroid_content_type: MyString
+  polaroid_file_size: 1
+  polaroid_updated_at: 2011-11-01 23:06:41
+  category_id: 1
+
+two:
+  slug: MyString
+  name: MyString
+  polaroid_file_name: MyString
+  polaroid_content_type: MyString
+  polaroid_file_size: 1
+  polaroid_updated_at: 2011-11-01 23:06:41
+  category_id: 1

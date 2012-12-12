@@ -1,0 +1,34 @@
+<div id="main" role="main" class="not-front alliances">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="full-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                    
+                </div>
+            </div>
+    	</section>
+            
+        <section id="content">
+        	<div class="container_16">
+            	
+                <dl>
+                	<% @alliances.each do |alliance| %>
+                	<dt>
+				<%= image_tag alliance.logo(:thumb) %>
+			</dt>
+                    	<dd>
+                    		<p class="grid_6">
+					<%= alliance.name %><br />
+                        		
+                        	</p>
+                    	</dd>
+                    	<% end %>
+                    
+                </dl>
+                
+                
+            </div>
+        </section>
+        
+        
+    </div>

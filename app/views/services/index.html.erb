@@ -1,0 +1,66 @@
+<div id="main" role="main" class="not-front services">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "Medical Laboral") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt=> "LMS Consulting") %>
+                </div>
+            </div>
+    	</section>
+    
+    	<section id="content">
+        		<section id="sidebar-light">
+                	<div class="sidebar-inner">
+                    <header>
+                    	Nuestros Chequeos Médicos Ocupacionales son personalizados enfocados a la identificación de las necesidades de cada organización o profesional que recurre a nosotros. Realizamos un análisis de los riesgos a los que se encuentran expuestos los colaboradores y establecemos un perfil del cual dependerán los exámenes a realizar. 
+                    </header>
+                	<nav>
+                    		<ul>
+                        	<% @servicesmed.each do |service| %>	
+                                    <li>
+				        <h2>
+					     <%= link_to service.name, service, :class=> 'btn-type-1' %>
+					
+                                        </h2>
+                                    </li>
+				<% end %>
+                        	</ul>
+                    	</nav> 
+                    </div>               	
+                </section>
+                
+                <section id="sidebar-dark">
+                	  <div class="sidebar-inner">
+                      <header>
+                    	Ofrecemos un servicio de calidad en todos los procesos de consultoría, capacitación, entrenamiento y reclutamiento de personal en base a una atención personalizada.
+                   	  </header>
+                		<nav>
+                    		<ul>
+                        	<% @serviceslms.each do |service| %>	
+                                    <li>
+				        <h2>
+					     <a><%= link_to service.name , service, :class=> 'btn-type-1' %>
+					
+                                        </h2>
+                                    </li>
+				<% end %>
+                        	</ul>
+                    	</nav> 
+                    </div>                	
+                </section>  
+		</section>
+        
+        <section id="postcript-top" class="front-blocks">
+          <div id="postcript-top-inner">
+            <div id="postcript-top-inner-inner">
+        		
+             </div>
+          </div>
+        </section>
+        
+        
+    </div>
+

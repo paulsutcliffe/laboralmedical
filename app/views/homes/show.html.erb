@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<%= image_tag @home.slide(:slide) %>
+<p>
+
+<p>
+  <b>Slide file name:</b>
+  <span><%= @home.slide_file_name %></span>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <span><%= @home.caption %></span>
+</p>
+
+
+<%= link_to 'Editar', edit_home_path(@home) %> |
+<%= link_to 'Ver', homes_path %>

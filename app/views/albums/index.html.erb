@@ -1,0 +1,54 @@
+<div id="main" role="main" class="not-front albums">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "LabMedical") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt=> "LMS Consulting") %>
+                </div>
+            </div>
+    	</section>
+    
+    	<section id="content">
+        		<section id="sidebar-light" class="labmedical">
+                	<div class="sidebar-inner">
+			   <% @albumsmed.each do |album| %>
+                		<figure>
+                            	  <%= link_to (image_tag album.polaroid(:regular)), album %>
+                                	<figcaption>
+                            			<%= album.name %><br />
+                                		<span class="date"><%= album.polaroid_updated_at %></span>
+                            		</figcaption>
+                        	</figure>
+                           <% end %>
+                    </div>               	
+                </section>
+                
+                <section id="sidebar-dark" class="consulting">
+                	  <div class="sidebar-inner">
+                	  <% @albumslms.each do |album| %>
+                		<figure>
+                                
+                                <%= link_to (image_tag album.polaroid(:regular)), album %>
+                            		<figcaption>
+                            			<%= album.name %><br />
+                                		<span class="date"><%= album.polaroid_updated_at %></span>
+                            		</figcaption>
+                        	</figure>
+                           <% end %>
+                    </div>              	
+                </section>  
+		</section>
+        
+        <section id="postcript-top" class="front-blocks">
+          <div id="postcript-top-inner">
+            <div id="postcript-top-inner-inner">
+        		
+             </div>
+          </div>
+        </section>
+        
+        
+    </div>

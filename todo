@@ -1,0 +1,19 @@
+3.Buscar y corregir todos los textos que estén en arial y ponerles el mismo font que se ha usado en el resto de textos.
+4.Agrandar el espacio para el párrafo de texto en el index de servicios
+5.
+
+
+10.Corregir el :class del botón de agregar en el adminlist de photos. Al momento de agregarle el parametro de :album_id, ha tomado el :class como un parametro más y lo está pasando en el url innecesariamente y no está aplicando la clase css.
+11.Corregir el :class en los links de adminlist de albums.
+
+
+
+
+
+
+
+
+
+
+5.Estilizar el la página menu.html.rb del controller access, con el mismo formato que servicios.
+8.Estilizar el título de todos los news y los edits

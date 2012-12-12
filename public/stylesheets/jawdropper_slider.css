@@ -1,0 +1,84 @@
+.jdslider {
+	position:relative;
+	background: url(../images/jdSlider/loading.gif) no-repeat 50% 50%;
+	margin:9px auto 0;
+}
+.jdslider img, .jdslider a, .jdslider span {
+	display:none;
+}
+
+.jdslider-caption {
+	background : #000;
+	bottom     : 0;
+	color      : white;
+	left       : 0;
+	opacity    : 0.7;
+	filter     : alpha(opacity=70);
+	padding    : 10px;
+	position   : absolute;
+	text-align : left;
+	width      : 100%;
+	font-family : Georgia,"Times New Roman",Times,serif;
+	font-size   : 14px;
+}
+
+.jdslider-selectors {
+	padding  : 0px;
+	position : absolute;
+	right    : 0px;
+	bottom   : -12px;
+	text-align: center;
+	z-index  : 1000;
+	width:100%
+}
+
+.jdslider-selector {
+	background  : url(../images/jdSlider/slider-pagination.png) no-repeat -3px -4px;
+	color       : #ab4f1d;
+	cursor      : pointer;
+	font-family : "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size   : 12px;
+	/*float       : left;*/
+	line-height: 220%;
+	height      : 9px;
+	margin-left : 0px; 
+	position    : relative;
+	text-align  : center;
+	width       : 10px;
+	display: inline-block;
+	*zoom:1;
+	*display:inline;
+	text-indent:-99999px;
+	border:5px solid white
+}
+
+.jdslider-selector:hover {
+	background: url(../images/jdSlider/slider-pagination.png) no-repeat -18px -4px;
+}
+
+.jdslider-current {
+	background  : url(../images/jdSlider/slider-pagination.png) no-repeat -18px -4px;
+	color       : #fff;
+}
+
+.jdslider-prev, .jdslider-next {
+	color       : #FFF;
+	cursor      : pointer;
+	font-family : "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size   : 12px;
+	height      : 39px !important;
+	line-height : 30px;
+	margin-top  : -15px;
+	padding  : 0px 10px;
+	position : absolute;
+	top      : 47%;
+	z-index  : 1000;
+	border   : 5px solid white !important 
+
+}
+.jdslider-prev:hover, .jdslider-next:hover {
+	/*background-color: #666;*/
+}
+.jdslider-prev { left  : -5px; background  :url(../images/jdSlider/slider-arrow.jpg) no-repeat left top; margin-left:0 !important}
+.jdslider-next { right : -5px; background  :url(../images/jdSlider/slider-arrow.jpg) no-repeat right top; margin-right:0 !important}
+

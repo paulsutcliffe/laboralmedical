@@ -1,0 +1,84 @@
+<div id="main" role="main" class="not-front services cms">
+    	<section id="preface-top" >
+        	<div class="container_16">
+         		<div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-laboral.png", :size => "240x100", :alt=> "Medical Laboral") %>
+                </div>
+                
+                <div class="half-side">
+                    <%= image_tag("/images/3-images/sidebar-logo-consulting.png", :size => "240x100", :alt=> "LMS Consulting") %>
+                </div>
+<div><%= link_to 'Agregar Nuevo Servicio', new_service_path, :class => 'btn-new' %></div>
+            </div>
+    	</section>
+    
+    	<section id="content">
+        		<section id="sidebar-light">
+                	<div class="sidebar-inner">
+                    <header>
+                    	LABORAL MEDICAL se compromete a prestar un servicio de Calidad avalando resultados
+						oportunos, confiables y confidenciales. Brindamos un servicio personalizado, contando con
+						el soporte técnico y profesionales calificados para lograr la satisfacción de nuestros clientes
+
+						
+						
+                    </header>
+                	<nav>
+                    		<ul>
+                        	<% @servicesmed.each do |service| %>	
+                                    <li>
+										
+									   
+				        <h2>
+					<span>
+					     <%= link_to service.name, edit_service_path(service), :class=> 'btn-type-1' %>
+					<%= link_to 'x', service, :confirm => '¿Seguro de borrar el servicio?', :method => :delete, :class=> 'btn-type-1 btn-type-1-del' %>
+					</span>
+					 
+					
+                                        </h2>
+                                    </li>
+				<% end %>
+                        	</ul>
+                    	</nav> 
+                    </div>               	
+                </section>
+                
+                <section id="sidebar-dark">
+                	  <div class="sidebar-inner">
+                      <header>
+                    	Nuestro Objetivo es asesorar a nuestros clientes para el bienestar de sus colaboradores,
+						recomendando las condiciones seguras y saludables de trabajo, minimizando los riesgos propios de
+						cada actividad laboral previniendo lesiones y enfermedades futuras como consecuencia de su trabajo 
+                   	  </header>
+                		<nav>
+                    		<ul>
+                        	<% @serviceslms.each do |service| %>	
+                                    <li>
+										
+									    
+				        <h2>
+					<span>
+					     <a><%= link_to service.name , edit_service_path(service), :class=> 'btn-type-1' %>
+							<%= link_to 'x', service, :confirm => '¿Seguro de borrar el servicio?', :method => :delete, :class=> 'btn-type-1 btn-type-1-del' %>
+							</span>
+                                        </h2>
+                                    </li>
+				<% end %>
+                        	</ul>
+                    	</nav> 
+                    </div>                	
+                </section>  
+		</section>
+        
+        <section id="postcript-top" class="front-blocks">
+          <div id="postcript-top-inner">
+            <div id="postcript-top-inner-inner">
+        		
+             </div>
+          </div>
+        </section>
+        
+        
+    </div>
+
