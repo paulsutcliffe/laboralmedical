@@ -4,8 +4,8 @@
      		<div class="full-side contact-header">
             <h1>Contáctanos</h1>
             <p>
-              <% if notice %>
-                <%= notice %>
+              <% if params[:notice] %>
+                <%= params[:notice] %>
               <% else %>
                 Resolveremos todas tus dudas.
               <% end %>
