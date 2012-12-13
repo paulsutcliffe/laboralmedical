@@ -63,7 +63,7 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author:
    ========================================================================== */
 
 
@@ -107,13 +107,13 @@ td { vertical-align: top; }
 
 
 /* ==|== print styles ======================================================= */
- 
+
 @media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; }
   tr, img { page-break-inside: avoid; }
@@ -146,7 +146,7 @@ a{
   -moz-transition: all 0.3s ease-out;  /* FF3.7+ */
   -o-transition: all 0.3s ease-out;  /* Opera 10.5 */
   -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
-  transition: all 0.3s ease-out; 
+  transition: all 0.3s ease-out;
 }
 
 /*
@@ -237,7 +237,7 @@ p{font-size:17px}
 */
 
 #postcript-top{background:url(../images/1-backgrounds/bg-secondary.jpg) repeat; border-bottom:1px solid #a29e9c}
-#postcript-bottom{background:url(../images/1-backgrounds/bg-postcript-bottom.jpg) repeat-x} 
+#postcript-bottom{background:url(../images/1-backgrounds/bg-postcript-bottom.jpg) repeat-x}
 #main.not-front #preface-top{background:url(../images/1-backgrounds/bg-secondary.jpg) repeat}
 
 /*
@@ -500,7 +500,7 @@ h1{font-size:24px}
 #postcript-top.front-blocks article .middle{display:table-cell; vertical-align:middle; #position:absolute; #top:50%}
 #postcript-top.front-blocks article p{width:80%; height:90%; position:relative; padding-left:50px; font-size:16px; #top:-50%}
 #postcript-top.front-blocks article p span,
-#postcript-top.front-blocks article span{width:45px; height:45px; position:absolute; top:54px; left:-15px; 
+#postcript-top.front-blocks article span{width:45px; height:45px; position:absolute; top:54px; left:-15px;
 background:url(../images/global.png) no-repeat -423px -5px; display:block}
 
 #postcript-top.front-blocks article.even{margin-right:80px}
@@ -524,7 +524,7 @@ background:url(../images/global.png) no-repeat -423px -5px; display:block}
 
 #postcript-bottom{}
 #postcript-bottom article.logos-empresas{height:130px; overflow:hidden}
-#postcript-bottom article.logos-empresas figure{width:50%; float:left; margin-top:15px}
+#postcript-bottom article.logos-empresas figure{width:100%; float:left; margin-top:15px}
 #postcript-bottom article.logos-empresas figure figcaption{color:white}
 #postcript-bottom article.logos-empresas figure img{margin-right:55px}
 
@@ -606,7 +606,7 @@ a.last{margin-bottom:0}
 =============================================
 */
 
-form{width:480px; padding-top:50px; float:left; position:relative; 
+form{width:480px; padding-top:50px; float:left; position:relative;
 	background:url(../images/1-backgrounds/bg-form-legend.png) no-repeat; margin-bottom:50px}
 form fieldset{background:url(../images/1-backgrounds/bg-form-bg-y.png) repeat-y; /*line-height:0*/}
 form fieldset legend{width:100%; text-align:center; position:absolute; top:15px; left:0; font-size:14px; text-transform:uppercase; color:#666}
@@ -615,7 +615,7 @@ form fieldset .field label{width:110px; padding-right:10px; text-align:right; fl
 form fieldset .field input{width:300px; padding:7px; background:url(../images/global.png) no-repeat -7px -215px; float:left; border:none}
 form fieldset .field textarea{width:300px;height:120px; padding:7px; background:url(../images/global.png) no-repeat -7px -245px; float:left; 			    resize:none; border:none}
 form fieldset .actions{padding:0 0px 0 127px; overflow:hidden}
-form fieldset .actions input{width:245px; height:50px; background:url(../images/global.png) no-repeat -330px -210px; 
+form fieldset .actions input{width:245px; height:50px; background:url(../images/global.png) no-repeat -330px -210px;
 	text-indent:-9999px; border:none}
 form:after{width:480px; height:30px; position:absolute; left:0; bottom:-30px; background:url(../images/1-backgrounds/bg-form-bottom.png) no-repeat; content:""}
 #content-top aside{float:left}
@@ -630,7 +630,7 @@ body.cms form{clear:left}
 
 #error_explanation{padding:20px; background:url("../images/1-backgrounds/bg-form-bg-y.png") repeat-y scroll 0 0 transparent}
 #error_explanation h2{margin-top:0; color:red}
-#error_explanation ul{margin-bottom:0; color:red}	
+#error_explanation ul{margin-bottom:0; color:red}
 
 /*
 =============================================
@@ -694,10 +694,10 @@ a.btn-new,
 
 table{-moz-border-radius:20px; -webkit-border-radius:20px; -o-border-radius:20px; border-radius:20px; behavior: url(../PIE.htc)}
 
-table tr:nth-last-child(1) td:nth-last-child(1){-moz-border-radius:0px 0px 20px 0px; -webkit-border-radius:0px 0px 20px 0px; 
+table tr:nth-last-child(1) td:nth-last-child(1){-moz-border-radius:0px 0px 20px 0px; -webkit-border-radius:0px 0px 20px 0px;
 -o-border-radius:0px 0px 20px 0px; border-radius:0px 0px 20px 0px; behavior: url(../PIE.htc)}
 
-table tr:nth-last-child(1) td:nth-child(1){-moz-border-radius:0 0 0 20px; -webkit-border-radius:0 0 0 20px; -o-border-radius:0 0 0 20px; 
+table tr:nth-last-child(1) td:nth-child(1){-moz-border-radius:0 0 0 20px; -webkit-border-radius:0 0 0 20px; -o-border-radius:0 0 0 20px;
 border-radius:0 0 0 20px; behavior: url(../PIE.htc)}
 
 
