@@ -3,7 +3,13 @@
     	<div class="container_16">
      		<div class="full-side contact-header">
             <h1>Contáctanos</h1>
-			<p>Resolveremos todas tus dudas.</p>
+            <p>
+              <% if notice %>
+                <%= notice %>
+              <% else %>
+                Resolveremos todas tus dudas.
+              <% end %>
+              </p>
             </div>
         </div>
 	</section>

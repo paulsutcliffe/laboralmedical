@@ -9,10 +9,10 @@ class ContactsController < ApplicationController
       format.xml  { render :xml => @contacts }
     end
   end
-  
+
   def adminlist
     @contacts = Contact.all
-    
+
     respond_to do |format|
       format.html { render :layout => 'admin' }
       format.xml  { render :xml => @contacts }
@@ -40,7 +40,7 @@ class ContactsController < ApplicationController
       format.xml  { render :xml => @contact }
     end
   end
-  
+
 
   # GET /contacts/1/edit
   def edit
@@ -56,7 +56,7 @@ class ContactsController < ApplicationController
       if @contact.save
         ContactMailer.message_confirmation(@contact).deliver
         ContactMailer.send_message(@contact).deliver
-        format.html { redirect_to(:action => 'new', :flash => 'Tu mensaje se ha enviado exitosamente, gracias.') }
+        format.html { redirect_to(:action => 'new', :notice => 'Tu mensaje se ha enviado exitosamente, gracias.') }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
         format.html { render :action => "new" }
