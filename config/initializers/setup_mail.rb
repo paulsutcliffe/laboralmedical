@@ -5,7 +5,7 @@ ActionMailer::Base.smtp_settings = {
   :user_name            => "info@laboralmedicalperu.com",
   :password             => "Sx3ghmb?",
   :authentication       => "plain",
-  :enable_starttls_auto => true
+  :enable_starttls_auto => false
 }
 
 ActionMailer::Base.default_url_options[:host] = "laboralmedicalperu.com"

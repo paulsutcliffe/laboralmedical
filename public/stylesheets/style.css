@@ -516,6 +516,8 @@ background:url(../images/global.png) no-repeat -423px -5px; display:block}
 #postcript-top.front-blocks article span.a4{background-position:-423px -155px; top:70px}
 #postcript-top.front-blocks article span.a3.b{top:70px}
 
+#postcript-top-inner{text-align:center; padding-top:30px}
+
 /*
 =============================================
  POSTCRIPT-BOTTOM (región)
