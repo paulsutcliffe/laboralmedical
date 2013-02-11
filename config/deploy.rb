@@ -1,9 +1,8 @@
 require "bundler/capistrano"
 
-set :user, "railsmedlab"
-set :domain, "yorkville.dreamhost.com"
-set :project, "LaboralmedicalperuCom"
-set :application, "LaboralmedicalperuCom"
+set :user, "laboralmedical"
+set :domain, "cottonwood.dreamhost.com"
+set :application, "laboralmedical"
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 set :repository,  "git@github.com:paulsutcliffe/laboralmedical.git"
 default_run_options[:pty] = true
