@@ -1,6 +1,6 @@
 
 
-/* Author: 
+/* Author:
 10.Corregir el :class del botón de agregar en el adminlist de photos. Al momento de agregarle el parametro de :album_id, ha tomado el :class como un parametro más y lo está pasando en el url innecesariamente y no está aplicando la clase css.
 11.Corregir el :class en los links de adminlist de albums.
 
@@ -18,9 +18,9 @@
 
 
 $(document).ready(function() {
-	
+
 	// slider
-	$('#slider').jdSlider({ 
+	$('#slider').jdSlider({
 		width  : 615,
 		height : 248,
 		delay  : 2000,
@@ -28,13 +28,13 @@ $(document).ready(function() {
 		showNavigation : true,
 		showSelectors : true
 	});
-	
+
 	// links open new window
 	$('.social-buttons a').click(function() {
 		window.open($(this).attr('href'));
 		return false
 	});
-	
+
 	jQuery('.a3:eq(1)').addClass('b');
 	jQuery('.front-blocks article p span').each(function(){
 $(this).appendTo($(this).parent().parent().parent())
@@ -42,8 +42,8 @@ $(this).appendTo($(this).parent().parent().parent())
 });
 
 // for ie
-jQuery('body').attr('style', 'background:url(images/1-backgrounds/bg-main.jpg) repeat');
-	
+jQuery('body').attr('style', 'background:url(/images/1-backgrounds/bg-main.jpg) repeat');
+
 	// back buttons
 	$('.btn-back').attr('href','javascript:history.back(-1)');
 
@@ -58,7 +58,7 @@ jQuery('body').attr('style', 'background:url(images/1-backgrounds/bg-main.jpg) r
   		$('#sidebar-dark').css('height', light);
 
 	}
-	
+
 
 	// services text resize
 	$('.btn-type-1').each(function() {
@@ -67,22 +67,22 @@ jQuery('body').attr('style', 'background:url(images/1-backgrounds/bg-main.jpg) r
 	  }
 
 	});
-	
+
 	// image not found
 	$('img').error(function(){
-		$(this).attr('src', '/images/1-backgrounds/img-not-loaded.png');		
+		$(this).attr('src', '/images/1-backgrounds/img-not-loaded.png');
 	});
-	
-	
+
+
 	// dates format
-	$('.date').each(function() {	
+	$('.date').each(function() {
 		hora = $(this).text().substring($(this).text().length - 12,19);
-		fecha = $(this).text().substr(0, $(this).text().length - 12);		
+		fecha = $(this).text().substr(0, $(this).text().length - 12);
 		$(this).text('Publicado el ' + fecha + 'a las ' + hora);
 	});
-	
-	
-	
+
+
+
 	// CMS fade images
 	$('.btn-edit img').bind({
  		mouseover: function(){
@@ -92,7 +92,7 @@ jQuery('body').attr('style', 'background:url(images/1-backgrounds/bg-main.jpg) r
    			$(this).stop().animate({opacity:0.2});
     	}
 	});
-	
+
 	// CMS radio categories
 	radio = $('input[name$="[category_id]"]')
 	lms = '<label class="radio">LMS</label> <input type="radio" name="category" value="1" checked class="radio left">' // create html tag 1
@@ -103,14 +103,14 @@ jQuery('body').attr('style', 'background:url(images/1-backgrounds/bg-main.jpg) r
 	$('input[name="category"]').click(function() {
 		radio.val($(this).val());
 	});
-	
-	
+
+
 	// lightbox
 //	jQuery(document).ready(function(){
 	  jQuery('.lightbox').lightbox();
 
 //	});
-	
+
 
 }); // end
 

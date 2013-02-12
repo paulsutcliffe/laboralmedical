@@ -133,9 +133,9 @@ td { vertical-align: top; }
 =============================================
 */
 
-body{background:url(../images/1-backgrounds/bg-main.jpg) repeat}
-#container{background:url(../images/1-backgrounds/bg-center.jpg) no-repeat center top}
-#footer-main{/*background:url(../images/1-backgrounds/bg-center.jpg) no-repeat 50% 85%*/}
+body{background:url("/images/1-backgrounds/bg-main.jpg") repeat}
+#container{background:url(/images/1-backgrounds/bg-center.jpg) no-repeat center top}
+#footer-main{/*background:url(/images/1-backgrounds/bg-center.jpg) no-repeat 50% 85%*/}
 a{text-decoration:none}
 p{text-align:justify; color:#989296}
 span{text-align:left}
@@ -236,9 +236,9 @@ p{font-size:17px}
 =============================================
 */
 
-#postcript-top{background:url(../images/1-backgrounds/bg-secondary.jpg) repeat; border-bottom:1px solid #a29e9c}
-#postcript-bottom{background:url(../images/1-backgrounds/bg-postcript-bottom.jpg) repeat-x}
-#main.not-front #preface-top{background:url(../images/1-backgrounds/bg-secondary.jpg) repeat}
+#postcript-top{background:url(/images/1-backgrounds/bg-secondary.jpg) repeat; border-bottom:1px solid #a29e9c}
+#postcript-bottom{background:url(/images/1-backgrounds/bg-postcript-bottom.jpg) repeat-x}
+#main.not-front #preface-top{background:url(/images/1-backgrounds/bg-secondary.jpg) repeat}
 
 /*
 =============================================
@@ -260,7 +260,7 @@ p{font-size:17px}
 /* main menu */
 #menu-main{width:600px; position:absolute; top:25px; right:0; overflow:hidden}
 #menu-main ul li{float:left}
-#menu-main ul li a{height:52px; background:url(../images/2-buttons/menu.png) no-repeat; display:block; outline:none; float:left}
+#menu-main ul li a{height:52px; background:url(/images/2-buttons/menu.png) no-repeat; display:block; outline:none; float:left}
 #menu-main ul li.servicios a{width:136px; background-position:0 0}
 #menu-main ul li.blog a{width:89px; background-position:-136px 0}
 #menu-main ul li.fotos a{width:104px; background-position:-225px 0}
@@ -269,7 +269,7 @@ p{font-size:17px}
 
 
 /* current */
-#menu-main ul li span{height:52px; background:url(../images/2-buttons/menu.png) no-repeat; display:block; outline:none; float:left; text-indent:-9999px}
+#menu-main ul li span{height:52px; background:url(/images/2-buttons/menu.png) no-repeat; display:block; outline:none; float:left; text-indent:-9999px}
 #menu-main ul li.servicios span{width:136px; background-position:0 -70px}
 #menu-main ul li.blog span{width:89px; background-position:-136px -70px}
 #menu-main ul li.fotos span{width:104px; background-position:-225px -70px}
@@ -278,7 +278,7 @@ p{font-size:17px}
 
 
 /* secondary menu */
-#menu-secondary{width:200px; height:45px; background:url(../images/2-buttons/menu.png) no-repeat -700px 0; position:absolute; top:0; right:0}
+#menu-secondary{width:200px; height:45px; background:url(/images/2-buttons/menu.png) no-repeat -700px 0; position:absolute; top:0; right:0}
 #menu-secondary ul{margin-left:26px}
 #menu-secondary ul li a{height:20px; display:block; outline:none; float:left}
 #menu-secondary ul li a.contacto{width:93px; margin:8px 0 0 12px}
@@ -311,7 +311,7 @@ p{font-size:17px}
 */
 
 
-#slider-container{padding-bottom:38px; background:url(../images/1-backgrounds/bg-slider-shadow.png) no-repeat 50% 105%; overflow:hidden }
+#slider-container{padding-bottom:38px; background:url(/images/1-backgrounds/bg-slider-shadow.png) no-repeat 50% 105%; overflow:hidden }
 #slider{border:5px solid white; overflow:visible}
 
 
@@ -345,7 +345,7 @@ p{font-size:17px}
 */
 
 
-#content-top{width:100%; overflow:hidden; background:url(../images/1-backgrounds/bg-main.jpg) repeat; padding-bottom:20px}
+#content-top{width:100%; overflow:hidden; background:url("/images/1-backgrounds/bg-main.jpg") repeat; padding-bottom:20px}
 #content-top figure img{border:5px solid white; box-shadow:0 0 2px #666}
 .post .sidebar-inner header span.date{float:left}
 
@@ -355,10 +355,10 @@ p{font-size:17px}
 =============================================
 */
 
-#content{width:100%; overflow:hidden; background:url(../images/1-backgrounds/bg-main.jpg) repeat}
+#content{width:100%; overflow:hidden; background:url("/images/1-backgrounds/bg-main.jpg") repeat}
 
-#content #sidebar-light{width:50%; min-height:650px; float:left; background:url(../images/1-backgrounds/bg-main.jpg) repeat}
-#content #sidebar-dark{width:50%; min-height:650px; float:left; background:url(../images/1-backgrounds/bg-dark.jpg) repeat}
+#content #sidebar-light{width:50%; min-height:650px; float:left; background:url("/images/1-backgrounds/bg-main.jpg") repeat}
+#content #sidebar-dark{width:50%; min-height:650px; float:left; background:url(/images/1-backgrounds/bg-dark.jpg) repeat}
 
 #content #sidebar-light .sidebar-inner{float:right}
 #content #sidebar-dark .sidebar-inner{float:left}
@@ -376,12 +376,12 @@ p{font-size:17px}
 
 /* PERSONALIZED */
 
-.category-1 #preface-top .container_16{background:url(../images/3-images/sidebar-logo-laboral.png) no-repeat 0 7px}
-.category-2 #preface-top .container_16{background:url(../images/3-images/sidebar-logo-consulting.png) no-repeat 0 7px}
+.category-1 #preface-top .container_16{background:url(/images/3-images/sidebar-logo-laboral.png) no-repeat 0 7px}
+.category-2 #preface-top .container_16{background:url(/images/3-images/sidebar-logo-consulting.png) no-repeat 0 7px}
 .category-1 #breadcrumb{margin-left:275px}
 .category-2 #breadcrumb{margin-left:275px}
 .category-2 #content,
-.category-2 #content-top{background:url("../images/1-backgrounds/bg-dark.jpg") repeat }
+.category-2 #content-top{background:url(/images/1-backgrounds/bg-dark.jpg) repeat }
 
 /* services */
 .services #content .sidebar-inner h2,
@@ -396,7 +396,7 @@ p{font-size:17px}
 .services.cms .sidebar-inner{padding-top:85px !important}
 .services-show #content-top{padding:40px 0 10px}
 .services-show #content-top figure{text-align:center; padding-bottom:30px}
-.services-show #content-top figure{background:url(../images/1-backgrounds/bg-slider-shadow.png) no-repeat 50% 105%}
+.services-show #content-top figure{background:url(/images/1-backgrounds/bg-slider-shadow.png) no-repeat 50% 105%}
 
 
 /* blogs */
@@ -455,7 +455,7 @@ body.cms .staff #content .sidebar-inner figure a.btn-edit{margin:0 10px 10px 0}
 
 /* alliances */
 .alliances #content dl{width:800px; min-height:300px; overflow:hidden; margin:0 auto}
-.alliances #content dl dt{width:60%; float:left; /*background:url(../images/2-buttons/menu.png) no-repeat 380px -215px*/}
+.alliances #content dl dt{width:60%; float:left; /*background:url(/images/2-buttons/menu.png) no-repeat 380px -215px*/}
 .alliances #content dl dt img{border:5px solid white; box-shadow:0 0 2px #666}
 .alliances #content dl dd{width:40%; float:left; margin-left:0; position:relative}
 .alliances #content dl dt, .alliances #content dl dd{margin-bottom:30px}
@@ -496,7 +496,7 @@ h1{font-size:24px}
 =============================================
 */
 
-#postcript-top.front-blocks article{width:400px; height:180px; background:url(../images/global.png) no-repeat 0 0; float:left; margin:25px 0; display:table; position:relative}
+#postcript-top.front-blocks article{width:400px; height:180px; background:url(/images/global.png) no-repeat 0 0; float:left; margin:25px 0; display:table; position:relative}
 #postcript-top.front-blocks article .middle{display:table-cell; vertical-align:middle; #position:absolute; #top:50%}
 #postcript-top.front-blocks article p{width:80%; height:90%; position:relative; padding-left:50px; font-size:16px; #top:-50%}
 #postcript-top.front-blocks article p span,
@@ -630,7 +630,7 @@ body.cms form{clear:left}
 .contact-header h1{margin:35px 0 5px 0}
 .contact-header p{font-size:18px; margin-top:0}
 
-#error_explanation{padding:20px; background:url("../images/1-backgrounds/bg-form-bg-y.png") repeat-y scroll 0 0 transparent}
+#error_explanation{padding:20px; background:url("/images/1-backgrounds/bg-form-bg-y.png") repeat-y scroll 0 0 transparent}
 #error_explanation h2{margin-top:0; color:red}
 #error_explanation ul{margin-bottom:0; color:red}
 
