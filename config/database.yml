@@ -34,9 +34,9 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: labmedicaldb
+  database: laboralmedical_production
   pool: 5
-  username: labmedicaldb
+  username: laboralmedicaldb
   password: chimpance99
   socket: /tmp/mysql.sock
-  host: labmedicaldb.avance.kosmyka.com
+  host: mysql.db.laboralmedicalperu.com
