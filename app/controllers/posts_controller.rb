@@ -10,12 +10,12 @@ class PostsController < ApplicationController
       format.xml  { render :xml => @posts }
     end
   end
-  
+
   def adminlist
     @postsmed = Post.where(:category_id => "1")
     @postslms = Post.where(:category_id => "2")
     @posts = Post.all
-    
+
     respond_to do |format|
       format.html { render :layout => 'application-cms' }
       format.xml  { render :xml => @posts }
@@ -26,9 +26,9 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
-    meta :title => @post.title, :description => @post.content
+    #meta :title => @post.title, :description => @post.content
     breadcrumb :post, @post
-    
+
 
     respond_to do |format|
       format.html  { render :layout => 'application-alt' }

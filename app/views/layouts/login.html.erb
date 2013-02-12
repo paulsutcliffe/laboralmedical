@@ -16,6 +16,7 @@
   <%= metamagic :title => @title, :description => "My default description.", :keywords => %w(keyword1 keyword2 keyword3) %>
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= favicon_link_tag 'favicon.png' %>
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
@@ -28,25 +29,25 @@
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   <%= javascript_include_tag "modernizr", "respond", :cache => "modernizer-respond" %>
-  
+
 </head>
 
 <body class="cms">
   <div id="container" style="background:none">
-  
+
     <header id="header-main">
     	<div class="container_16">
         	<header>
-            	
-			
+
+
             </header>
-        	
+
             <section>
             	<%= image_tag("3-images/logo.png", :size => "330x80", :alt => "LabMedical", :id => "logo")  %>
-            	
+
             </section>
-            
-           
+
+
         </div>
     </header>
 
@@ -68,8 +69,8 @@
   	</div>
 
 
-  
-   
+
+
   </div> <!--! end of #container -->
 
 
@@ -94,8 +95,8 @@
   <%= javascript_include_tag 'mylibs/jawdropper_slider', 'script', :cache => 'powerfactory' %>
   <!-- end scripts-->
 
-	
-  
+
+
 
 </body>
 </html>
